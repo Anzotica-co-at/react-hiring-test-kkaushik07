@@ -1,0 +1,234 @@
+/* TopNavMenu.css */
+
+/* ----- Base styles ----- */
+:root {
+  --brand-dark: #002147;       /* Deep navy / dark blue */
+  --brand-gold: #c5a46d;       /* Warm gold */
+  --text-color: #fff;          /* White text on dark nav */
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --submenu-bg: #fff;
+  --submenu-text: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif; /* Classic, elegant serif font */
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--brand-dark);
+  color: var(--text-color);
+  border-bottom: 2px solid var(--brand-gold);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--brand-gold);
+}
+
+/* ----- Desktop menu ----- */
+.desktop-menu {
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: var(--brand-gold);
+}
+
+/* Submenu with fade & slide */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--submenu-bg);
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 180px;
+  z-index: 10;
+}
+
+.menu-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu-link {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--submenu-text);
+  transition: background 0.3s;
+}
+
+.submenu-link:hover {
+  background: #f5f5f5;
+}
+
+/* Nested mega menu with fade & slide */
+.nested-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--submenu-bg);
+  border: 1px solid #eee;
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.menu-item:hover .nested-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nested-column {
+  min-width: 160px;
+}
+
+.nested-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+}
+
+.nested-link {
+  display: block;
+  text-decoration: none;
+  color: var(--submenu-text);
+  padding: 4px 0;
+  transition: background 0.3s;
+}
+
+.nested-link:hover {
+  background: #f5f5f5;
+}
+
+/* ----- Mobile menu ----- */
+.mobile-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--brand-dark);
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  border-top: 1px solid var(--brand-gold);
+  z-index: 100;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu-button {
+  width: 100%;
+  text-align: left;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mobile-submenu {
+  background: rgba(255,255,255,0.05);
+}
+
+.mobile-submenu-link {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+
+.mobile-submenu-link:hover {
+  background: var(--hover-bg);
+}
+
+.mobile-nested-title {
+  font-weight: bold;
+  padding: 10px 40px;
+  color: var(--brand-gold);
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+}

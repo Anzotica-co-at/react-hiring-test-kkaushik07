@@ -1,53 +1,50 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/2MYYzS_A)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19881369&assignment_repo_type=AssignmentRepo)
-# React Frontend Assessment – UI Replication Task
+# React Demo App
 
-## Objective
+This guide explains how to set up the React Demo App on your local machine.
 
-Recreate *two sections* from the reference website using *React*
+## Prerequisites
 
-1. The *top navigation menu*
-2. A *slider/carousel* section from the homepage
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
----
+## Setup Instructions
 
-##  Reference Website
+1. **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd react-demo-app
+    ```
 
-https://www.ritzcarlton.com/
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
+3. **Start the development server:**
+    ```bash
+    npm start
+    ```
 
----
+4. Open your browser and navigate to `http://localhost:5173/` to view the app.
 
-## Requirements
+## Troubleshooting
 
-- Use *React* (Vite — your choice)
-- Focus on * structure*, *CSS styling* and *component breakdown*
-- Make it *responsive* on desktop and mobile
-- Use *functional components*
-- You may use *CSS modules, Tailwind, or styled-components*
+If you encounter issues, try:
+- Deleting `node_modules` and running `npm install` again.
+- Ensuring Node.js and npm are up to date.
 
----
+## About
 
-## Optional Libraries
+This project is a modular React application that demonstrates advanced navigation and UI patterns inspired by luxury hospitality brands. The app features a responsive navigation menu with multi-level submenus and nested menus, implemented using reusable React components and modern CSS. State management is handled with React hooks, ensuring smooth user interactions and clean code organization.
 
-- You may use a carousel library (e.g., `swiper`, `react-slick`, etc.)
-- Or implement a basic slider yourself (for bonus points)
+Key highlights:
+- **Reusable Components:** Navigation, submenu, and carousel components are designed for reusability and scalability.
+- **Responsive Design:** The navigation adapts seamlessly to desktop and mobile views, including overlay menus and touch-friendly controls.
+- **Data-Driven Menus:** Navigation structure is defined in external data files, making it easy to update or extend menu items without changing component logic.
+- **Modern Styling:** Uses modular CSS for each component, with attention to accessibility and visual polish.
+- **Separation of Concerns:** Components, assets, and data are organized in dedicated folders for maintainability.
 
----
+This approach ensures the codebase is easy to extend, maintain, and adapt for real-world projects that require complex navigation and interactive UI elements.
 
-##  What We’re Evaluating
-
-- Semantic and accessible HTML
-- Mobile responsiveness
-- Component structure
-- Code clarity and file organization
-- Use of props/state/hooks if relevant
-
----
-
-## Submission Instructions
-
-1. Push your code to this repository.
-2. Include a working preview link (Vercel/Netlify) if possible.
-3. Add any setup/run instructions in this README.
+> **Note:** This project represents the output of just two days of work. The primary focus has been on achieving functional parity with the reference design, rather than making the UI visually identical. Some visual differences may exist, but the core navigation and interactive features are implemented as intended
 
