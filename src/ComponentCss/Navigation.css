@@ -1,5 +1,3 @@
-/* NavigationMenu styles matching NavigationMenu.jsx classes */
-
 .nav {
     background-color: #fff;
     position: sticky;
@@ -26,8 +24,6 @@
     letter-spacing: 1px;
     flex: 0 0 auto;
     order: 1;
-    padding-top: 1rem;
-
 }
 .nav-icons{
     display: flex;
@@ -37,26 +33,6 @@
     flex: 0 0 auto;
     gap: 20px;  
 }
-/* .nav__sideLinks{
-    display: none;
-    align-items: center;
-    margin-left: auto;
-    order: 2;
-    flex: 0 0 auto;
-    gap: 16px;
-} */
-
-/* .nav__sideLinks button {
-    background: none;
-    border: 1px solid #222;
-    padding: 8px 16px;
-    border-radius: 4px;
-    color: #222;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.2s;
-} */
 .nav-links {
     list-style: none;
     display: flex;
@@ -130,31 +106,13 @@
     margin: 0;
 }
 
-/* .nav-overlay a {
-    color: #000000;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-} */
-
-
-/* .nav__close {
-    position: absolute;
-    top: 24px;
-    left: 32px;
-    background: none;
-    border: none;
-    color: #000000;
-    font-size: 2.5rem;
-    cursor: pointer;
-    z-index: 101;
-} */
-
 /* Responsive styles */
 @media (max-width: 1359px) {
     .nav-links {
         display: none;
+    }
+    .nav-logo {
+        padding-top: 1rem;
     }
     .nav-hamburger {
         display: flex;
@@ -334,12 +292,12 @@
     }
 
     .nested-title::after {
-        content: " ";   /* Unicode arrow, can also use '→' or '›' */
+        content: " ";
         font-size: 18px;
         margin-left: 8px;
         vertical-align: middle;
         float: inline-end;
-        border-top: 2px solid #916E27;   /* gold color */
+        border-top: 2px solid #916E27;  
         border-right: 2px solid #916E27;
         transform: rotate(45deg);
         width: 10px;
