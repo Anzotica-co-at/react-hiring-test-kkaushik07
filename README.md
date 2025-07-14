@@ -1,3 +1,12 @@
+# Live Demo Link
+- https://cheerful-muffin-40c02a.netlify.app/
+  
+# Objective
+Recreate two sections from the reference website using React
+
+- The top navigation menu, including animations and styling.  
+- A slider/carousel section from the homepage
+
 # React Demo App
 
 This guide explains how to set up the React Demo App on your local machine.
